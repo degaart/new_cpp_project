@@ -30,8 +30,8 @@ file(GLOB SRCS src/*.cpp src/*.c)
 add_executable(\${PROJECT_NAME} \${SRCS})
 target_compile_features(\${PROJECT_NAME} PUBLIC cxx_std_17)
 target_link_libraries(\${PROJECT_NAME}
-PRIVATE
-    fmt::fmt
+    PRIVATE
+        fmt::fmt
 )
 EOF
 
@@ -41,8 +41,8 @@ cat << EOF > src/main.cpp
 #include <fmt/format.h>
 
 int main() {
-fmt::print("It works!\n");
-return 0;
+    fmt::print("It works!\n");
+    return 0;
 }
 EOF
 
